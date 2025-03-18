@@ -73,7 +73,7 @@ plt.bar(models, accuracy_scores, color=['blue', 'green', 'red'])
 plt.xlabel("Models")
 plt.ylabel("Accuracy Score")
 plt.title("Model Accuracy Comparison")
-plt.ylim(0.7, 0.9)  # Accuracy ranges from 0 to 1
+plt.ylim(0.7, 0.9)  # Accuracy ranges from 0.7 to 0.9
 plt.show()
 
 # Confusion Matrix (LinearSVC, SGDClassifier, SVC)
