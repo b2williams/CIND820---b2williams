@@ -64,6 +64,7 @@ for neighbours in n:
 
 # Metrics and Plots #
 
+# Bar Chart
 models = ["LinearSVC", "SGDClassifier", "SVC"]
 accuracy_scores = [accuracy_score(y_test, lsvc_p), accuracy_score(y_test, sgdc_p), accuracy_score(ytest, svc_p)]
 
@@ -74,7 +75,8 @@ plt.ylabel("Accuracy Score")
 plt.title("Model Accuracy Comparison")
 plt.ylim(0.7, 0.9)  # Accuracy ranges from 0 to 1
 plt.show()
-# Plot confusion matrices
+
+# Confusion Matrix (LinearSVC, SGDClassifier, SVC)
 fig, axes = plt.subplots(1, 3, figsize=(15, 5))
 
 for ax, cm, model in zip(axes, [lsvc_cm, sgdc_cm, svc_cm],
@@ -87,6 +89,7 @@ for ax, cm, model in zip(axes, [lsvc_cm, sgdc_cm, svc_cm],
 plt.tight_layout()
 plt.show()
 
+# Confusion Matrix (K-NN)
 fig, axes = plt.subplots(1, 3, figsize=(15, 5))
 
 for ax, cm, model in zip(axes, [knn_cm[1], knn_cm[2], knn_cm[3]],
